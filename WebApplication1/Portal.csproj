@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{84DECE99-1F89-4DD9-81CF-9EE10D27CFD0}</ProjectGuid>
+    <ProjectGuid>{CF2923A7-BF7A-4CEE-9B2D-666417DEC66D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Portal</RootNamespace>
-    <AssemblyName>Portal</AssemblyName>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -66,7 +66,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="agr_responsible.aspx" />
+    <Content Include="hfmadmin.aspx" />
+    <Content Include="images\calendar.png" />
+    <Content Include="images\calendar2.png" />
+    <Content Include="pnbfileupload.aspx" />
+    <Content Include="tipsadmin.aspx" />
+    <Content Include="redovisning_danmark.aspx" />
+    <Content Include="valutaadmin.aspx" />
     <Content Include="packages.config" />
+    <Content Include="Master.Master" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,10 +88,97 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\postenBring2.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="Logon.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\init.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="useradmin.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="agr_responsible.aspx.cs">
+      <DependentUpon>agr_responsible.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="agr_responsible.aspx.designer.cs">
+      <DependentUpon>agr_responsible.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\login.cs" />
+    <Compile Include="Controllers\Object.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="hfmadmin.aspx.cs">
+      <DependentUpon>hfmadmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hfmadmin.aspx.designer.cs">
+      <DependentUpon>hfmadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pnbfileupload.aspx.cs">
+      <DependentUpon>pnbfileupload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pnbfileupload.aspx.designer.cs">
+      <DependentUpon>pnbfileupload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tipsadmin.aspx.cs">
+      <DependentUpon>tipsadmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tipsadmin.aspx.designer.cs">
+      <DependentUpon>tipsadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="redovisning_danmark.aspx.cs">
+      <DependentUpon>redovisning_danmark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="redovisning_danmark.aspx.designer.cs">
+      <DependentUpon>redovisning_danmark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="valutaadmin.aspx.cs">
+      <DependentUpon>valutaadmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="valutaadmin.aspx.designer.cs">
+      <DependentUpon>valutaadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logon.aspx.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logon.aspx.designer.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="useradmin.aspx.cs">
       <DependentUpon>useradmin.aspx</DependentUpon>
@@ -87,6 +187,17 @@
     <Compile Include="useradmin.aspx.designer.cs">
       <DependentUpon>useradmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -101,9 +212,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>25078</DevelopmentServerPort>
+          <DevelopmentServerPort>25543</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:25078/</IISUrl>
+          <IISUrl>http://localhost:25543/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

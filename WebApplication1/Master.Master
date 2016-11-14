@@ -1,0 +1,67 @@
+﻿
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="Portal.Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>         
+    <link href="../Content/Site.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/modernizr-2.6.2.js"></script>
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/jquery.dropotron.min.js"></script>
+    <script src="Scripts/init.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server"> 
+
+    </asp:ContentPlaceHolder>
+
+</head>
+<body  class="homepage">
+   <%-- <div>--%>
+   <div class="wrapper style1">
+        <div id="header">
+            <div class="container">
+           
+                <nav id="nav">
+                    <div id="logo">
+                    <img src="images/postenBring2.jpg" />
+                     </div>
+    <asp:ContentPlaceHolder ID="Navigation" runat="server"> 
+
+    </asp:ContentPlaceHolder>
+                    </nav>
+ 
+      
+
+    </div>
+ </div>
+         <div id="banner">
+            <section class="container"></section>
+        </div>
+  </div>
+
+    <div class="wrapper style2">
+        <section class="container">
+            <div class="row double">
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">/>
+            <%--here the body for the pages --%>
+        </asp:ContentPlaceHolder>
+            </div>
+        </section>
+    </div>
+    <div id="footer">
+        <section class="container">
+            <header class="major">
+            
+                <span class="byline">Byline here </span>
+            </header>
+        </section>
+
+
+    </div>
+
+</body>
+</html>
+
