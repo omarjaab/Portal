@@ -16,7 +16,7 @@ namespace Portal
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            
+            // omars Commit TEST 
             if (Controllers.login.data !=null)
                 Controllers.login.ConstructNavigator(Navigator);
             else { Response.Redirect("Logon.aspx"); }
