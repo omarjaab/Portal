@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace Portal
 {
+    //Durgam rocks, Omar sucks
     public partial class index : System.Web.UI.Page
     {
         Controllers.DefaultController dp = new Controllers.DefaultController();
