@@ -70,6 +70,7 @@
     <Content Include="hfmadmin.aspx" />
     <Content Include="images\calendar.png" />
     <Content Include="images\calendar2.png" />
+    <Content Include="images\delete-button.jpg" />
     <Content Include="pnbfileupload.aspx" />
     <Content Include="tipsadmin.aspx" />
     <Content Include="redovisning_danmark.aspx" />

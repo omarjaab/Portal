@@ -49,10 +49,9 @@ namespace Portal
             GvAllData.DataBind();
         }
 
+
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            //string group = ddlGrupp.SelectedValue.ToString();
-            int avdelning = int.Parse(ddlAvdelning.SelectedValue);
             if (dp.CheckColumns(ddlGrupp.SelectedValue, int.Parse(ddlAvdelning.SelectedValue)).Rows.Count >= 1)
             {
                 lblMsg.Text = "item is already exist";
@@ -60,8 +59,6 @@ namespace Portal
             else
             dp.AddColumn(ddlGrupp.SelectedValue, int.Parse(ddlAvdelning.SelectedValue));
                 lblMsg.Text = "item added ";
-            
-          
         }
     }
 }
