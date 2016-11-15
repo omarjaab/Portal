@@ -160,6 +160,7 @@ namespace Portal.Controllers
         
 
 
+
         // Redovisning Denmark 
         internal DataTable getGroup()
         {
@@ -168,6 +169,49 @@ namespace Portal.Controllers
             AC.Fill(dt);
             return dt;
         }
+        internal DataTable getAvdelning()
+        {
+            dt = new DataTable();
+            SqlDataAdapter AC = new SqlDataAdapter("select distinct [Balance dimension 2]as Avdelning, ([Balance dimension 2] +' - '+ [Balance dimension 2 name])as fullAvdelning from DW_GLOBAL..Dim_Accounting_Structure where Division='341' order by 1 ", connection);
+            AC.Fill(dt);
+            return dt;
+        }
+
+        internal DataTable getAllData()
+        {
+            dt = new DataTable();
+            SqlDataAdapter AC = new SqlDataAdapter("select Grupp,Avdelningskod,Avdelningsnamn from [BRINGDK_Redovisning_Danmark_View] where Avdelningskod > -1 order by Grupp_sort, Sort, Avdelningskod", connection);
+            AC.Fill(dt);
+            return dt;
+        }
+        internal DataTable CheckColumns(string Group,int avdelning)
+        {
+            dt = new DataTable();
+            SqlDataAdapter AC = new SqlDataAdapter("select * from BRINGDK_Redovisning_Danmark where Avdelning='"+Group+"' and Redkod="+avdelning+"", connection);
+            AC.Fill(dt);
+            return dt;
+            
+
+            
+
+        }
+        internal void AddColumn(string Group, int avdelning)
+        {
+            using (SqlConnection con = new SqlConnection(connection))
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("INSERT BRINGDK_Redovisning_Danmark (Redkod,Avdelning) VALUES('" + avdelning + "','" + Group + "') ", con);
+
+                cmd.ExecuteNonQuery();
+
+            }
+        }
+
+
+
+
+
         // Tips Admin Page 
         internal DataTable getAvräkning()
         {

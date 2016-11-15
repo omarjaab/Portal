@@ -17,6 +17,7 @@ namespace Portal
             if (!Page.IsPostBack)
             {
                 getDdlData();
+                getGridView();
             }
             
             if (Controllers.login.data != null)
@@ -31,9 +32,36 @@ namespace Portal
 
         public void getDdlData()
         {
+            // Grupp Drop Down List 
             ddlGrupp.DataSource = dp.getGroup();
             ddlGrupp.DataTextField = "Grupp";
+            ddlGrupp.DataValueField = "Grupp";
             ddlGrupp.DataBind();
+            // Avdelning Drop down list 
+            ddlAvdelning.DataSource = dp.getAvdelning();
+            ddlAvdelning.DataTextField = "fullAvdelning";
+            ddlAvdelning.DataValueField = "Avdelning";
+            ddlAvdelning.DataBind();
+        }
+        public void getGridView()
+        {
+            GvAllData.DataSource= dp.getAllData();
+            GvAllData.DataBind();
+        }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            //string group = ddlGrupp.SelectedValue.ToString();
+            int avdelning = int.Parse(ddlAvdelning.SelectedValue);
+            if (dp.CheckColumns(ddlGrupp.SelectedValue, int.Parse(ddlAvdelning.SelectedValue)).Rows.Count >= 1)
+            {
+                lblMsg.Text = "item is already exist";
+            }
+            else
+            dp.AddColumn(ddlGrupp.SelectedValue, int.Parse(ddlAvdelning.SelectedValue));
+                lblMsg.Text = "item added ";
+            
+          
         }
     }
 }
