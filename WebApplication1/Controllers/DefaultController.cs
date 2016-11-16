@@ -180,7 +180,7 @@ namespace Portal.Controllers
         internal DataTable getAllData()
         {
             dt = new DataTable();
-            SqlDataAdapter AC = new SqlDataAdapter("select Grupp,Avdelningskod,Avdelningsnamn from [BRINGDK_Redovisning_Danmark_View] where Avdelningskod > -1 order by Grupp_sort, Sort, Avdelningskod", connection);
+            SqlDataAdapter AC = new SqlDataAdapter("select ID,Grupp,Avdelningskod,Avdelningsnamn from [BRINGDK_Redovisning_Danmark_View] where Avdelningskod > -1 order by Grupp_sort, Sort, Avdelningskod", connection);
             AC.Fill(dt);
             return dt;
         }
@@ -208,6 +208,18 @@ namespace Portal.Controllers
             }
         }
 
+        internal void DeleteColumn (int id)
+        {
+            using (SqlConnection con = new SqlConnection(connection))
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("DELETE FROM BRINGDK_Redovisning_Danmark WHERE [ID] ="+id+" ", con);
+
+                cmd.ExecuteNonQuery();
+
+            }
+        }
 
 
 

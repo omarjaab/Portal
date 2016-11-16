@@ -60,5 +60,14 @@ namespace Portal
             dp.AddColumn(ddlGrupp.SelectedValue, int.Parse(ddlAvdelning.SelectedValue));
                 lblMsg.Text = "item added ";
         }
+
+        protected void GvAllData_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+           
+            //dp.DeleteColumn(int.Parse(GvAllData.Rows[e.RowIndex].Cells[1].Text));
+            dp.DeleteColumn(int.Parse(GvAllData.DataKeys[e.RowIndex]["ID"].ToString()));
+            //GvAllData.DataKeys[e.RowIndex]["ID"].ToString();
+        }
+
     }
 }

@@ -22,6 +22,24 @@ namespace Portal {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Navigator;
         
         /// <summary>
+        /// manager2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager manager2;
+        
+        /// <summary>
+        /// updatepanel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatepanel2;
+        
+        /// <summary>
         /// ddlGrupp control.
         /// </summary>
         /// <remarks>

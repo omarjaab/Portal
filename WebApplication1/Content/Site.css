@@ -13,6 +13,9 @@
 		background: #222222;
 	}
 
+    .hiddencol{
+        display:none;
+    }
 		body.loading * {
 			-moz-transition: none !important;
 			-webkit-transition: none !important;
