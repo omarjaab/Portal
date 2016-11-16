@@ -16,8 +16,8 @@ namespace Portal
         {
             if (!Page.IsPostBack)
             {
-                getDdlData();
                 getGridView();
+                 getDdlData();
             }
             
             if (Controllers.login.data != null)
@@ -45,6 +45,7 @@ namespace Portal
         }
         public void getGridView()
         {
+            
             GvAllData.DataSource= dp.getAllData();
             GvAllData.DataBind();
         }
@@ -63,11 +64,10 @@ namespace Portal
 
         protected void GvAllData_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-           
-            //dp.DeleteColumn(int.Parse(GvAllData.Rows[e.RowIndex].Cells[1].Text));
             dp.DeleteColumn(int.Parse(GvAllData.DataKeys[e.RowIndex]["ID"].ToString()));
-            //GvAllData.DataKeys[e.RowIndex]["ID"].ToString();
+            
         }
+
 
     }
 }

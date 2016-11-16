@@ -5,8 +5,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
 <form runat="server">
-              <asp:ScriptManager runat="server" ID="manager2"></asp:ScriptManager>
-                <asp:UpdatePanel runat="server" ID="updatepanel2" UpdateMode="Always">
+                  <asp:ScriptManager runat="server" ID="manager2" EnablePartialRendering="true"></asp:ScriptManager>
+                <asp:UpdatePanel runat="server" ID="updatepanel2" UpdateMode="Always" ChildrenAsTriggers="true" >
             <ContentTemplate>
     <h3>Redovisning Danmark</h3>
     <table>
@@ -55,7 +55,7 @@
         <asp:BoundField HeaderText="Avdelningsnamn" ShowHeader="true" DataField="Avdelningsnamn"  /> 
             
            
-             <asp:CommandField DeleteImageUrl="~/images/delete.png" ShowDeleteButton="True" ButtonType="Image" ControlStyle-Height="25px" ControlStyle-Width="25px"  />
+             <asp:CommandField  DeleteImageUrl="~/images/delete.png" ShowDeleteButton="True" ButtonType="Image" ControlStyle-Height="25px" ControlStyle-Width="25px"  />
             
            
          </Columns>
@@ -64,7 +64,7 @@
   </ContentTemplate>
             <Triggers>
                  <asp:AsyncPostBackTrigger ControlID="btnAdd" EventName="Click"/>
-              
+              <asp:AsyncPostBackTrigger ControlID="GvAllData" EventName="RowCommand" />
             </Triggers>
 </asp:UpdatePanel>
 </form>
