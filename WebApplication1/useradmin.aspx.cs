@@ -48,6 +48,7 @@ namespace Portal
    
                 usersddl.AutoPostBack = true;
                 usersddl.ID = "usersddl";
+               
                 usersddl.SelectedIndexChanged += new EventHandler(usersddl_SelectedIndexChanged);
                 
   
@@ -57,8 +58,9 @@ namespace Portal
 
                 PasswordTextBox.ID = "PasswordTextBox";
                 PasswordTextBox.AutoPostBack = true;
+                
                 PasswordTextBox.TextChanged += new EventHandler(PasswordTextBox_TextChanged);
-                UserListContainer.Controls.Add(PasswordTextBox);
+                PasswordContainer.Controls.Add(PasswordTextBox);
 
 
                 UserListContainer.Controls.Add(usersddl);

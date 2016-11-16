@@ -597,7 +597,10 @@ opacity: 0.5;
 				}
 
 /* Dropotron */
+.ddlStyle{
 
+
+}
 	.dropotron {
 		top: 2em;
 		background: rgba(255, 255, 255, 0.78) none repeat scroll 0% 0%;
@@ -606,6 +609,8 @@ opacity: 0.5;
 		min-width: 12em;
 		padding: 1em 0;
 		color: #058D07;
+        color: inherit;
+                color:red;
 	}
 
 		.dropotron > li {

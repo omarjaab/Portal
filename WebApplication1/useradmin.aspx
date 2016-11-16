@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
 
 
-    <form runat="server" >
+    <form runat="server">
         <asp:ScriptManager ID="updatedata" runat="server"  ></asp:ScriptManager>
         <asp:UpdatePanel ID="update" runat="server" UpdateMode="Always" AutoPostBack="true">
            
@@ -21,10 +21,11 @@
         </tr>
         
         <tr>
-            <td   id="UserListContainer" runat="server"></td>
-
-            <td class="auto-style15"  >
-              <%--  <asp:textbox ID="passwordTxt" runat="server"></asp:textbox>--%>
+            <br />
+            <td   id="UserListContainer" runat="server"  ></td>
+            <br />
+            <td class="auto-style15" id="PasswordContainer" runat="server" >
+             
             </td>
  
             <td class="auto-style16" ><div id="ApplicationContainer" runat="server" style="OVERFLOW-Y:scroll;width:auto; height:200px; position:-ms-page"></div></td>
