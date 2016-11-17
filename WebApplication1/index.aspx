@@ -4,5 +4,5 @@
 </ul>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
-index good news 
+index good news  
 </asp:Content>
