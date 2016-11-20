@@ -71,6 +71,7 @@
     <Content Include="images\calendar.png" />
     <Content Include="images\calendar2.png" />
     <Content Include="images\delete.png" />
+    <Content Include="images\icon-ios7-arrow-down-128.png" />
     <Content Include="pnbfileupload.aspx" />
     <Content Include="tipsadmin.aspx" />
     <Content Include="redovisning_danmark.aspx" />

@@ -1,40 +1,92 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="useradmin.aspx.cs" Inherits="Portal.useradmin" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="Navigation" runat="server">
     <ul id="Navigator" runat="server">
 </ul>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
 
 
-    <form runat="server">
-        <asp:ScriptManager ID="updatedata" runat="server"  ></asp:ScriptManager>
-        <asp:UpdatePanel ID="update" runat="server" UpdateMode="Always" AutoPostBack="true">
-           
-            <ContentTemplate>  
+    <form runat="server" >
+     <asp:ScriptManager ID="mngr" runat="server"></asp:ScriptManager>
 <table>
         <tr>
-            <td  >Användarnamn</td>
-            <td class="auto-style15" >Lösenord</td>
+            <td class="auto-style18"  >Användarnamn</td>
+            <td class="auto-style20" >Lösenord</td>
             <td class="auto-style16" >Tillåtna applikationer</td>
             <td class="auto-style14" >AvtalsTyper</td>
             <td class="auto-style7"  >Divisioner</td>
         </tr>
         
         <tr>
-            <br />
-            <td   id="UserListContainer" runat="server"  ></td>
-            <br />
-            <td class="auto-style15" id="PasswordContainer" runat="server" >
-             
+            <td class="auto-style18" >
+                <div id="UserListContainer" runat="server" style="width:auto; height:250px; position:-ms-page" >
+               
+                    <asp:DropDownList   DataValueField="Id" DataTextField="Name" CssClass="selectpicker" data-live-search="true" ID="usersddl" AutoPostBack="true" runat="server" OnSelectedIndexChanged="usersddl_SelectedIndexChanged">
+                    </asp:DropDownList>
+            
+                </div>
             </td>
- 
-            <td class="auto-style16" ><div id="ApplicationContainer" runat="server" style="OVERFLOW-Y:scroll;width:auto; height:200px; position:-ms-page"></div></td>
 
-            <td class="auto-style14"   ><div id="agreement" runat="server" style="width:auto; height:200px; position:-ms-page " ></div></td>
+            <td class="auto-style20" >
+                <asp:UpdatePanel ID="t1" runat="server">
+                    <ContentTemplate>
+                         <div  id="passwordContainer" runat="server" style="width:auto; height:250px; position:-ms-page" >
+                             <asp:TextBox ID="PasswordTextBox" runat="server" CssClass="auto-style21" Width="147px"></asp:TextBox>
+                         </div>
            
-            <td ><div id="Division" runat="server" style="OVERFLOW-Y:scroll;width:auto; height:200px; position:-ms-page"></div></td>
-        </tr>
-            </table>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="usersddl" EventName ="SelectedIndexChanged" />
+                    </Triggers>
+                </asp:UpdatePanel>
+              </td>
+            <td class="auto-style16" >
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                         <div   style="width:auto; height:250px; position:-ms-page; overflow-y:scroll" >
+                             <asp:CheckBoxList ID="applicationschklbox"  DataValueField="Id" DataTextField="Name"  runat="server"></asp:CheckBoxList>
+                         </div>
+           
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="usersddl" EventName ="SelectedIndexChanged" />
+                    </Triggers>
+                </asp:UpdatePanel>
+              </td>
+               <td class="auto-style14" >
+                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                    <ContentTemplate>
+                         <div  style="width:auto; height:250px; position:-ms-page;" >
+                           <asp:CheckBoxList DataValueField="Id" DataTextField="Name"  ID="agreementchklbox" runat="server"></asp:CheckBoxList>
+                         </div>
+           
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="usersddl" EventName ="SelectedIndexChanged" />
+                         <asp:AsyncPostBackTrigger ControlID="btnSave" EventName ="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnDeleteUser" EventName ="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnAddUser" EventName ="Click" />
+                    </Triggers>
+                </asp:UpdatePanel>
+              </td>
+               <td class="auto-style19" >
+                <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                    <ContentTemplate>
+                         <div  style="width:auto; height:250px; position:-ms-page; overflow-y:scroll" >
+                           <asp:CheckBoxList  DataValueField="Id" DataTextField="Name"  ID="divisionerchklbox" runat="server"></asp:CheckBoxList>
+                         </div>
+           
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="usersddl" EventName ="SelectedIndexChanged" />
+                    </Triggers>
+                </asp:UpdatePanel>
+              </td>
+      </tr>
+    </table>
+          
                 <br /><br /><br /><br />
                 <br /><br /><br /><br />
       <asp:Button runat="server" ID="btnSave" OnClick="btnSave_Click" Text="Spara"   UseSubmitBehavior="False" /> 
@@ -63,16 +115,6 @@
                     <br />
                     <br />
                 </asp:Panel>
-                <br />
-                </ContentTemplate>
-<Triggers>
-<asp:AsyncPostBackTrigger ControlID="btnAddUser"  EventName="Click"   />
-<asp:AsyncPostBackTrigger ControlID="btnSave"  EventName="Click"   />
-</Triggers>
-</asp:UpdatePanel>  
-     
-      
-         
     </form>
 
          
@@ -121,19 +163,28 @@
 
         /*}*/
         .auto-style7 {
-            width: 413px;
+            width: auto;
         }
         .auto-style14 {
-            width: 390px;
-        }
-        .auto-style15 {
-            width: 200px;
+            width: 228px;
         }
         .auto-style16 {
-            width: 720px;
+            width: 377px;
         }
         .auto-style17 {
             margin-bottom: 0px;
+        }
+        .auto-style18 {
+            width: 217px;
+        }
+        .auto-style19 {
+            width: auto;
+        }
+        .auto-style20 {
+            width: 210px;
+        }
+        .auto-style21 {
+            margin-left: 12px;
         }
         </style>
 

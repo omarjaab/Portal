@@ -44,38 +44,48 @@ namespace Portal.Controllers
             return dt;
         }
 
-        internal DataTable getuserapplication(string userId)
+        internal DataTable GetUserPermissionInfo(string userId)
         {
 
             dt = new DataTable();
-            SqlDataAdapter AC = new SqlDataAdapter("Execute sp_UserApplication @userId", connection);
+            SqlDataAdapter AC = new SqlDataAdapter("Execute [sp_GetUserPermissionInfo] @userId", connection);
             AC.SelectCommand.Parameters.AddWithValue("@userId", userId);
             AC.Fill(dt);
             return dt;
 
         }
+        //internal DataTable getuserapplication(string userId)
+        //{
 
-        internal DataTable getuserAgreement(string userId)
-        {
+        //    dt = new DataTable();
+        //    SqlDataAdapter AC = new SqlDataAdapter("Execute sp_UserApplication @userId", connection);
+        //    AC.SelectCommand.Parameters.AddWithValue("@userId", userId);
+        //    AC.Fill(dt);
+        //    return dt;
 
-            dt = new DataTable();
-            SqlDataAdapter AC = new SqlDataAdapter("Execute sp_UserAgreement @userId", connection);
-            AC.SelectCommand.Parameters.AddWithValue("@userId", userId);
-            AC.Fill(dt);
-            return dt;
+        //}
 
-        }
+        //internal DataTable getuserAgreement(string userId)
+        //{
 
-        internal DataTable getuserDivision(string userId)
-        {
+        //    dt = new DataTable();
+        //    SqlDataAdapter AC = new SqlDataAdapter("Execute sp_UserAgreement @userId", connection);
+        //    AC.SelectCommand.Parameters.AddWithValue("@userId", userId);
+        //    AC.Fill(dt);
+        //    return dt;
 
-            dt = new DataTable();
-            SqlDataAdapter AC = new SqlDataAdapter("Execute sp_UserDivision2 @userId", connection);
-            AC.SelectCommand.Parameters.AddWithValue("@userId", userId);
-            AC.Fill(dt);
-            return dt;
+        //}
 
-        }
+        //internal DataTable getuserDivision(string userId)
+        //{
+
+        //    dt = new DataTable();
+        //    SqlDataAdapter AC = new SqlDataAdapter("Execute sp_UserDivision2 @userId", connection);
+        //    AC.SelectCommand.Parameters.AddWithValue("@userId", userId);
+        //    AC.Fill(dt);
+        //    return dt;
+
+        //}
 
         internal string InsertObjectsIntoDB(List<Object> inputList)
         {

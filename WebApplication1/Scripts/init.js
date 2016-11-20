@@ -27,6 +27,7 @@
 				offsetY: -15,
 				hoverDelay: 0
 			});
+		
 
 	});
 

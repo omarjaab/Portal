@@ -53,10 +53,11 @@ namespace Portal
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            if (dp.CheckColumns(ddlGrupp.SelectedValue, int.Parse(ddlAvdelning.SelectedValue)).Rows.Count >= 1)
+            if (dp.CheckColumns(ddlGrupp.SelectedValue, int.Parse(ddlAvdelning.SelectedValue)).Rows.Count > 0)
             {
                 lblMsg.Text = "item is already exist";
             }
+            
             else
             dp.AddColumn(ddlGrupp.SelectedValue, int.Parse(ddlAvdelning.SelectedValue));
                 lblMsg.Text = "item added ";
