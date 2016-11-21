@@ -46,7 +46,7 @@
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                          <div   style="width:auto; height:250px; position:-ms-page; overflow-y:scroll" >
-                             <asp:CheckBoxList ID="applicationschklbox"  DataValueField="Id" DataTextField="Name"  runat="server"></asp:CheckBoxList>
+                             <asp:CheckBoxList ID="applicationschklbox"  DataValueField="Id" DataTextField="Name"  runat="server" CssClass="checkbox checkbox-success"></asp:CheckBoxList>
                          </div>
            
                     </ContentTemplate>
@@ -58,8 +58,8 @@
                <td class="auto-style14" >
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
-                         <div  style="width:auto; height:250px; position:-ms-page;" >
-                           <asp:CheckBoxList DataValueField="Id" DataTextField="Name"  ID="agreementchklbox" runat="server"></asp:CheckBoxList>
+                         <div  style="width:auto; height:250px; position:-ms-page;"  >
+                           <asp:CheckBoxList DataValueField="Id" DataTextField="Name"  ID="agreementchklbox" runat="server" CssClass="checkbox checkbox-success"></asp:CheckBoxList>
                          </div>
            
                     </ContentTemplate>
@@ -75,7 +75,7 @@
                 <asp:UpdatePanel ID="UpdatePanel3" runat="server">
                     <ContentTemplate>
                          <div  style="width:auto; height:250px; position:-ms-page; overflow-y:scroll" >
-                           <asp:CheckBoxList  DataValueField="Id" DataTextField="Name"  ID="divisionerchklbox" runat="server"></asp:CheckBoxList>
+                           <asp:CheckBoxList  DataValueField="Id" DataTextField="Name"  ID="divisionerchklbox" runat="server" CssClass="checkbox checkbox-success"></asp:CheckBoxList>
                          </div>
            
                     </ContentTemplate>
@@ -184,7 +184,7 @@
             width: 210px;
         }
         .auto-style21 {
-            margin-left: 12px;
+            margin-left: 8px;
         }
         </style>
 

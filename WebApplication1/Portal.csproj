@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="agr_responsible.aspx" />
+    <Content Include="Content\awesome-bootstrap-checkbox.css" />
     <Content Include="hfmadmin.aspx" />
     <Content Include="images\calendar.png" />
     <Content Include="images\calendar2.png" />
@@ -82,6 +83,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Content\awesome-bootstrap-checkbox.scss" />
+    <Content Include="Content\awesome-bootstrap-checkbox.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
