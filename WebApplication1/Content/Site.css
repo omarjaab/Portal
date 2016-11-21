@@ -594,7 +594,7 @@ opacity: 0.5;
 				#nav > ul > li a {
 					color: inherit;
 					line-height: 4em;
-					letter-spacing: 2px;
+					letter-spacing: 1px;
 					text-decoration: none;
 					text-transform: uppercase;
 					font-weight: 400;

@@ -87,9 +87,20 @@
       </tr>
     </table>
           
-                <br /><br /><br /><br />
-                <br /><br /><br /><br />
-      <asp:Button runat="server" ID="btnSave" OnClick="btnSave_Click" Text="Spara"   UseSubmitBehavior="False" /> 
+                <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      <asp:Button runat="server" ID="btnSave" OnClick="btnSave_Click" Text="Spara"   UseSubmitBehavior="False" Width="133px" /> 
                 <br />
                 <asp:Button runat="server" ID="btnDeleteUser"  Text="Delete" OnClick="btnDeleteUser_Click" />
            <%-- <label runat="server" id="lbl"></label>--%>
