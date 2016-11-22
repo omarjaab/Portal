@@ -5,19 +5,29 @@ using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace Portal
 {
+    //Durgam rocks, Omar sucks
     public partial class hfmadmin : System.Web.UI.Page
     {
         Controllers.DefaultController dp = new Controllers.DefaultController();
         DataTable dt = new DataTable(); // declearing dt as a global variable.
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                CreateDropDownList();
+            }
+            if (Controllers.login.data != null)
+            {
+                Controllers.login.ConstructNavigator(Navigator);
+            }
+            else { Response.Redirect("Logon.aspx"); }
             //DropDownSelectYear();
             //DropDownSelectMounth();
-            CreateDropDownList();
         }
 
         private void CreateDropDownList()
@@ -46,9 +56,9 @@ namespace Portal
             DropDownMounth.ID = "DropDownMounth";
             var months = new CultureInfo("SV").DateTimeFormat.MonthNames;
 
-            for (int i = 0; i < months.Length -1; i++)
+            for (int i = 0; i < months.Length - 1; i++)
             {
-                ListItem li = new ListItem(months[i], (i+1).ToString());
+                ListItem li = new ListItem(months[i], (i + 1).ToString());
                 DropDownMounth.Items.Add(li);
             }
             DropDownMounthPlace.Controls.Add(DropDownMounth);
@@ -99,6 +109,5 @@ namespace Portal
         //        DropDownMounth.Items.Add(li);
         //    }
         //}
-
     }
 }
