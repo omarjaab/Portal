@@ -28,12 +28,8 @@ System.Configuration.ConfigurationManager.ConnectionStrings["ConnStringDWAdmin"]
             if (Controllers.login.data != null)
             {
                 Controllers.login.ConstructNavigator(Navigator);
-
-
             }
-
             else { Response.Redirect("Logon.aspx"); }
-
         }
 
         public void BindData()

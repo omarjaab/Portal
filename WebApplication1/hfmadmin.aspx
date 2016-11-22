@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="hfmadmin.aspx.cs" Inherits="Portal.hfmadmin" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Navigation" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="Navigation" runat="server">
+    <ul id="Navigator" runat="server">
+</ul>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
