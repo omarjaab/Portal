@@ -167,9 +167,139 @@ namespace Portal.Controllers
             }
 
         }
-        
 
 
+        // LMC
+
+        internal DataTable getAgreement(string v)
+        {
+            try
+            {
+                dt = new DataTable();
+
+                SqlDataAdapter Adapter = new SqlDataAdapter("exec [sp_Agr_Info] @userID", connection);
+                Adapter.SelectCommand.Parameters.AddWithValue("@userID", v);
+                Adapter.Fill(dt);
+
+                return dt;
+            }
+            catch (Exception e)
+            {
+                return new DataTable();//<--- Not finished yet
+
+            }
+
+        }
+
+        internal DataTable get_TxtBox_Data(string UID, string AgreementType, string Company, string Division, string BusinessPartner, string Name, string OrgNr, string AgreementNr, string AgreementResponsible, string Department)
+        {
+            try
+            {
+                dt = new DataTable();
+                //SqlConnection con = new SqlConnection(connection);
+                //con.Open();
+                SqlConnection con = new SqlConnection(connection);
+
+                con.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandTimeout = 60;
+
+                SqlDataAdapter Adapter = new SqlDataAdapter("exec [sp_Agreement_Search]@UID,@AgreementType,@Company,@Division,@BusinessPartner,@Name,@OrgNr,@AgreementNr,@AgreementResponsible,@Department", con);
+                Adapter.SelectCommand.Parameters.AddWithValue("@UID", UID);
+                Adapter.SelectCommand.Parameters.AddWithValue("@AgreementType", AgreementType);
+                Adapter.SelectCommand.Parameters.AddWithValue("@Company", Company);
+                Adapter.SelectCommand.Parameters.AddWithValue("@Division", Division);
+                Adapter.SelectCommand.Parameters.AddWithValue("@BusinessPartner", BusinessPartner);
+                Adapter.SelectCommand.Parameters.AddWithValue("@Name", Name);
+                Adapter.SelectCommand.Parameters.AddWithValue("@OrgNr", OrgNr);
+                Adapter.SelectCommand.Parameters.AddWithValue("@AgreementNr", AgreementNr);
+                Adapter.SelectCommand.Parameters.AddWithValue("@AgreementResponsible", AgreementResponsible);
+                Adapter.SelectCommand.Parameters.AddWithValue("@Department", Department);
+                Adapter.Fill(dt);
+                return dt;
+
+                con.Close();
+
+
+
+
+            }
+            catch (Exception e)
+            {
+                return new DataTable(); //<--- Not finished yet
+
+            }
+        }
+
+
+        internal DataTable Agreement_search_Delete(string AgreementNumber, string Company, string Division)
+        {
+            try
+            {
+                dt = new DataTable();
+
+                SqlConnection con = new SqlConnection(connection);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("exec [sp_Agr_Search_Delete] @AgreementNumber,@Company , @Division", con);
+                cmd.Parameters.AddWithValue("@AgreementNumber", AgreementNumber);
+                cmd.Parameters.AddWithValue("@Company", Company);
+                cmd.Parameters.AddWithValue("@Division", Division);
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+                return dt;
+            }
+            catch (Exception e)
+            {
+
+                return new DataTable();
+            }
+        }
+
+        internal void CreateAgreement(string AgreementNumber, string Company, string Division)
+        {
+            try
+            {
+                dt = new DataTable();
+
+                SqlConnection con = new SqlConnection(connection);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("exec [sp_Agr_Search_Delete] @AgreementNumber,@Company , @Division", con);
+                cmd.Parameters.AddWithValue("@AgreementNumber", AgreementNumber);
+                cmd.Parameters.AddWithValue("@Company", Company);
+                cmd.Parameters.AddWithValue("@Division", Division);
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+                //return dt;
+            }
+            catch (Exception e)
+            {
+                //Do a logging to file.
+                //  return new DataTable();
+            }
+        }
+
+        internal DataTable Get_AgreementResponsible_Create()
+        {
+            try
+            {
+                dt = new DataTable();
+                SqlDataAdapter Adapter = new SqlDataAdapter("exec [SP_Agreement_Create_Responsible_DDL]", connection);
+                Adapter.Fill(dt);
+                return dt;
+            }
+            catch (Exception e)
+            {
+
+                return (dt);
+            }
+        }
+
+        internal void Create_New_Contract()
+        {
+
+        }
 
         // Redovisning Denmark 
         internal DataTable getGroup()
