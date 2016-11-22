@@ -37,6 +37,7 @@ namespace Portal
             DropDownDivision.DataValueField = "Sort_order";
             DropDownDivision.DataBind();
             DropDownDivision.CssClass = "selectpicker";
+            DropDownDivision.Attributes.Add("data-live-search", "true");
             DropDownDivisionPlace.Controls.Add(DropDownDivision);
             // ddl years 
             DropDownList DropDownYear = new DropDownList();
@@ -46,6 +47,8 @@ namespace Portal
                 ListItem li = new ListItem(i.ToString(), i.ToString());
                 DropDownYear.Items.Add(li);
             }
+            DropDownYear.CssClass = "selectpicker";
+            DropDownYear.Attributes.Add("data-live-search", "true");
             DropDownYearPlace.Controls.Add(DropDownYear);
             // ddl months 
             DropDownList DropDownMounth = new DropDownList();
@@ -56,6 +59,8 @@ namespace Portal
                 ListItem li = new ListItem(months[i], (i + 1).ToString());
                 DropDownMounth.Items.Add(li);
             }
+            DropDownMounth.CssClass = "selectpicker";
+            DropDownMounth.Attributes.Add("data-live-search", "true");
             DropDownMounthPlace.Controls.Add(DropDownMounth);
         }
     }
