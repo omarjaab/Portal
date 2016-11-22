@@ -55,7 +55,7 @@
         <asp:BoundField HeaderText="Avdelningsnamn" ShowHeader="true" DataField="Avdelningsnamn"  /> 
             
            
-             <asp:CommandField  DeleteImageUrl="~/images/delete.png" ShowDeleteButton="True" ButtonType="Image" ControlStyle-Height="25px" ControlStyle-Width="25px"  />
+             <asp:CommandField  DeleteImageUrl="~/images/DeleteIcon.png" ShowDeleteButton="True" ButtonType="Image" ControlStyle-Height="25px" ControlStyle-Width="25px"  />
             
            
          </Columns>
