@@ -25,6 +25,7 @@ namespace Portal
             Controllers.login.data = dp.Login(Controllers.login.uname, Controllers.login.password);
             if (Controllers.login.data.Rows.Count > 0)
             {
+                Session.Add("UserID", Controllers.login.data.Rows[0]["uid"].ToString());
                 Response.Redirect("index.aspx");
             }
             
