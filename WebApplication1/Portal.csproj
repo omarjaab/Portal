@@ -67,15 +67,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="agr_responsible.aspx" />
+    <Content Include="agr_search.aspx" />
     <Content Include="Content\awesome-bootstrap-checkbox.css" />
     <Content Include="images\calendar.png" />
     <Content Include="images\calendar2.png" />
-    <Content Include="images\delete.png" />
     <Content Include="images\DeleteIcon.png" />
     <Content Include="images\icon-ios7-arrow-down-128.png" />
     <Content Include="images\SaveIcon.png" />
     <Content Include="hfmadmin.aspx" />
     <Content Include="pnbfileupload.aspx" />
+    <None Include="Scripts\jquery-1.8.0.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.0.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js" />
     <Content Include="tipsadmin.aspx" />
     <Content Include="redovisning_danmark.aspx" />
     <Content Include="valutaadmin.aspx" />
@@ -123,6 +126,13 @@
     </Compile>
     <Compile Include="agr_responsible.aspx.designer.cs">
       <DependentUpon>agr_responsible.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="agr_search.aspx.cs">
+      <DependentUpon>agr_search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="agr_search.aspx.designer.cs">
+      <DependentUpon>agr_search.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\login.cs" />
@@ -217,16 +227,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>25543</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:25543/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
