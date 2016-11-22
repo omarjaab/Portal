@@ -15,7 +15,7 @@
         <asp:Label ID="Label1" runat="server" Text="Välj uppgift: "></asp:Label>
         <br />
         <br />
-        <asp:RadioButtonList ID="rblCurrency" runat="server">
+        <asp:RadioButtonList ID="rblCurrency" runat="server" CssClass="radio radio-success">
             <asp:ListItem >Lägg in kursinformation</asp:ListItem>
             <asp:ListItem  >Lägg till ny valutakod</asp:ListItem>
         </asp:RadioButtonList>
@@ -31,7 +31,7 @@
             <asp:Label ID="Label2" runat="server" Text="Välj valutaperiod: "></asp:Label>
             <br />
             <br />
-            <asp:DropDownList ID="ddlYear" runat="server">
+            <asp:DropDownList ID="ddlYear" runat="server" >
             </asp:DropDownList>
             &nbsp;
             <asp:DropDownList ID="ddlMonth" runat="server">

@@ -4,63 +4,77 @@
     <ul id="Navigator" runat="server">
     </ul>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-        index good news
-        <asp:UpdatePanel ID="uppdateGrid" runat="server">
-            <ContentTemplate>
-                <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="UserID" DataSourceID="SqlDataSource1">
-                    <Columns>
-                        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                        <asp:BoundField DataField="UserID" HeaderText="UserID" ReadOnly="True" SortExpression="UserID" />
-                        <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                    </Columns>
-                </asp:GridView>
-            </ContentTemplate>
-            <Triggers>
-                <asp:AsyncPostBackTrigger ControlID="Button1" EventName="Click" />
-            </Triggers>
-        </asp:UpdatePanel>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnStringDWAdmin %>" DeleteCommand="DELETE FROM [ResponsibleEmail] WHERE [UserID] = @original_UserID AND (([Email] = @original_Email) OR ([Email] IS NULL AND @original_Email IS NULL))" InsertCommand="INSERT INTO [ResponsibleEmail] ([UserID], [Email]) VALUES (@UserID, @Email)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [ResponsibleEmail] ORDER BY [UserID]" UpdateCommand="UPDATE [ResponsibleEmail] SET [Email] = @Email WHERE [UserID] = @original_UserID AND (([Email] = @original_Email) OR ([Email] IS NULL AND @original_Email IS NULL))">
-            <DeleteParameters>
-                <asp:Parameter Name="original_UserID" Type="String" />
-                <asp:Parameter Name="original_Email" Type="String" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="UserID" Type="String" />
-                <asp:Parameter Name="Email" Type="String" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="Email" Type="String" />
-                <asp:Parameter Name="original_UserID" Type="String" />
-                <asp:Parameter Name="original_Email" Type="String" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
-        &nbsp;<br />
-        <asp:UpdatePanel ID="InputInfo" runat="server">
-            <ContentTemplate>
-        <asp:Label ID="Label1" runat="server" Text="Användar Id"></asp:Label>
-        <asp:TextBox ID="txtuserId" runat="server"></asp:TextBox>
-        <asp:Label ID="Label2" runat="server" Text="Email"></asp:Label>
-        <asp:TextBox ID="txtuserEmail" runat="server"></asp:TextBox>
-        <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
-        <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Lägg till" />
-            </ContentTemplate>
-                </asp:UpdatePanel>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-    </form>
-</asp:Content>
-<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="head">
-    <style type="text/css">
-        #form1 {
-            height: 281px;
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <style>
+        #SubTable{
+            width:50%;
+        }
+         #SubTable td{
+            width: 472px;
+            Padding: 5px ;
         }
     </style>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ScriptManager ID="NotDDR" runat="server"></asp:ScriptManager>
+            <asp:UpdatePanel ChildrenAsTriggers="true" ID="MyUppdateDDR" runat="server">
+                <ContentTemplate>
+                    <asp:GridView ID="GridView1" runat="server" PageSize="5"
+                        AllowPaging="true" OnPageIndexChanging="GridView1_PageIndexChanging" 
+                        CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="false">
+                <AlternatingRowStyle BackColor="White" />
+                <EditRowStyle BackColor="#7C6F57" />
+                <FooterStyle BackColor="#1C5E55"  Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#E3EAEB" />
+                <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                <SortedAscendingHeaderStyle BackColor="#246B61" />
+                <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                <SortedDescendingHeaderStyle BackColor="#15524A" />                    
+                         <Columns>
+                            <asp:TemplateField HeaderText="Användar ID">
+                                <ItemTemplate>
+                                    <asp:Label ID="lblstid" runat="server"></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Email">
+                                <ItemTemplate>
+                                    <asp:TextBox ID="txtEmailId" runat="server"> </asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField ItemStyle-HorizontalAlign="Center" >
+                                <ItemTemplate >
+                                    <asp:ImageButton  CommandArgument='<%# Container.DataItemIndex %>' CommandName="Row_Updating" ID="SaveButton" OnClick="SaveButton_Click" runat="server" ImageUrl="~/images/SaveIcon.png" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                             <asp:TemplateField ItemStyle-HorizontalAlign="Center">
+                                <ItemTemplate>
+                                    <asp:ImageButton  CommandArgument='<%# Container.DataItemIndex %>' CommandName="Row_Deleting" ID="DeleteButton" OnClick="DeleteButton_Click" runat="server" ImageUrl="~/images/DeleteIcon.png" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            <table  id="SubTable" >
+                <tr>
+                    <td >
+                        <asp:Label ID="lblName" runat="server" Font-Bold="True" Text="Användare ID"></asp:Label>
+                        <asp:TextBox ID="new_UserId" CellPadding="7"  runat="server" Width="433px"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblEmailId" runat="server" Font-Bold="True" Text="Email"></asp:Label>
+                        <asp:TextBox ID="new_EmailId" CellPadding="7" runat="server" Width="131px"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click"   />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
 </asp:Content>
-

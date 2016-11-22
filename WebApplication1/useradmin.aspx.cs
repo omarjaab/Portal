@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
-
+//hej ahmed test omar durgam
 namespace Portal
 {
     public partial class useradmin : System.Web.UI.Page

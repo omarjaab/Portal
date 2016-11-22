@@ -1,3 +1,7 @@
+
+@import url('awesome-bootstrap-checkbox.less');
+@import url('awesome-bootstrap-checkbox.scss');
+
 .checkbox {
   padding-left: 20px;
 }
