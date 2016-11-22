@@ -20,8 +20,8 @@
         </tr>
         
         <tr>
-            <td class="auto-style18" >
-                <div id="UserListContainer" runat="server" style="width:auto; height:250px; position:-ms-page" >
+            <td class="auto-style22" >
+                <div id="UserListContainer" runat="server" style="width:auto; height:50px; position:-ms-page" >
                
                     <asp:DropDownList   DataValueField="Id" DataTextField="Name" CssClass="selectpicker" data-live-search="true" ID="usersddl" AutoPostBack="true" runat="server" OnSelectedIndexChanged="usersddl_SelectedIndexChanged">
                     </asp:DropDownList>
@@ -29,11 +29,11 @@
                 </div>
             </td>
 
-            <td class="auto-style20" >
+            <td class="auto-style23" >
                 <asp:UpdatePanel ID="t1" runat="server">
                     <ContentTemplate>
-                         <div  id="passwordContainer" runat="server" style="width:auto; height:250px; position:-ms-page" >
-                             <asp:TextBox ID="PasswordTextBox" runat="server" CssClass="auto-style21" Width="147px"></asp:TextBox>
+                         <div  id="passwordContainer" runat="server" style="width:auto; height:50px; position:-ms-page" >
+                             <asp:TextBox ID="PasswordTextBox" runat="server" CssClass="auto-style21" Width="147px" BackColor="White"></asp:TextBox>
                          </div>
            
                     </ContentTemplate>
@@ -42,7 +42,7 @@
                     </Triggers>
                 </asp:UpdatePanel>
               </td>
-            <td class="auto-style16" >
+            <td class="auto-style24" >
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                          <div   style="width:auto; height:250px; position:-ms-page; overflow-y:scroll" >
@@ -55,7 +55,7 @@
                     </Triggers>
                 </asp:UpdatePanel>
               </td>
-               <td class="auto-style14" >
+               <td class="auto-style25" >
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
                          <div  style="width:auto; height:250px; position:-ms-page;"  >
@@ -91,21 +91,11 @@
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
       <asp:Button runat="server" ID="btnSave" OnClick="btnSave_Click" Text="Spara"   UseSubmitBehavior="False" Width="133px" /> 
-                <br />
+                &nbsp;
                 <asp:Button runat="server" ID="btnDeleteUser"  Text="Delete" OnClick="btnDeleteUser_Click" />
+                <br />
            <%-- <label runat="server" id="lbl"></label>--%>
-                <br />
-                <br />
                 <br />
                 <br />
                 <asp:Panel ID="Panel1" runat="server" CssClass="auto-style17">
@@ -190,12 +180,29 @@
         }
         .auto-style19 {
             width: auto;
+            height: 141px;
         }
         .auto-style20 {
             width: 210px;
         }
         .auto-style21 {
             margin-left: 8px;
+        }
+        .auto-style22 {
+            width: 217px;
+            height: 141px;
+        }
+        .auto-style23 {
+            width: 210px;
+            height: 141px;
+        }
+        .auto-style24 {
+            width: 377px;
+            height: 141px;
+        }
+        .auto-style25 {
+            width: 228px;
+            height: 141px;
         }
         </style>
 
