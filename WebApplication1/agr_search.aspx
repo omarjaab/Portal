@@ -101,7 +101,7 @@
       
     </asp:Panel>
 
-    <asp:Panel ID="agr_modify_Section" runat="server">
+    <asp:Panel ID="agr_modify_Section" runat="server" Visible="false">
      
         <table>
             <tr>

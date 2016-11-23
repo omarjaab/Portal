@@ -163,14 +163,19 @@ namespace Portal
               
         }
 
+
+
         protected void Create_btn_Click(object sender, EventArgs e)
         {
-            string AgreementType = DDL_Create_Agr.SelectedValue;
-            string CompanyDivision = DDL_Create_DIV.SelectedValue;
-            string Company = CompanyDivision.Substring(0, CompanyDivision.IndexOf("-"));
-            string Division = CompanyDivision.Substring(CompanyDivision.IndexOf("-")+1, CompanyDivision.Length);
-            dp.CreateAgreement(AgreementType, Company, Division);
-            GetAgreements();
+            Response.Redirect("agr_Create_New.aspx");
+
+            //// ****************** Working code ***************
+            //string AgreementType = DDL_Create_Agr.SelectedValue;
+            //string CompanyDivision = DDL_Create_DIV.SelectedValue;
+            //string Company = CompanyDivision.Substring(0, CompanyDivision.IndexOf("-"));
+            //string Division = CompanyDivision.Substring(CompanyDivision.IndexOf("-")+1);
+            //dp.CreateAgreement(AgreementType, Company, Division);
+            //GetAgreements();
         }
     }
 }
