@@ -330,5 +330,125 @@ namespace Portal.Controllers
             AC.Fill(dt);
             return dt;
         }
+        // Bring_Cargo_Overdue_Invoices_Email 
+        internal DataTable getOverdueInvoicesEmails()
+        {
+            dt = new DataTable();
+            SqlDataAdapter AC = new SqlDataAdapter("SELECT T1.[Lokasjon], T1.[TO] as mail_to, T1.[CC] as cc_to, T1.[Subject], T1.Body FROM DW_ADMIN.dbo.Bring_Cargo_Overdue_Invoices_Email_Adress_Incl_Body T1", connection);
+            AC.Fill(dt);
+            return dt;
+        }
+
+        internal void UpdateData(string email, string cc, string Subject, string body, string Lokasjon)
+
+        {
+
+            try
+
+            {
+
+                dt = new DataTable();
+
+                SqlConnection con = new SqlConnection(connection);
+
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("UPDATE DW_ADMIN.dbo.Bring_Cargo_Overdue_Invoices_Email_Adress_Incl_Body SET [TO] = '" + email + "',[CC] = '" + cc + "',[Subject] = '" + Subject + "', [Body] = '" + body + "' WHERE Lokasjon = '" + Lokasjon + "'", con);
+
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+
+
+
+            }
+
+            catch (Exception e)
+
+            {
+
+            }
+
+        }
+
+        internal void AddData(string Lokasjon, string TO, string CC, string Subject, string Body)
+
+        {
+
+            try
+
+            {
+
+                dt = new DataTable();
+
+                SqlConnection con = new SqlConnection(connection);
+
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("INSERT DW_ADMIN.dbo.Bring_Cargo_Overdue_Invoices_Email_Adress_Incl_Body ([Lokasjon],[TO],[CC],[Subject],[Body]) VALUES ('" + Lokasjon + "','" + TO + "','" + CC + "','" + Subject + "','" + Body + "')", con);
+
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+
+
+
+
+            }
+
+            catch (Exception e)
+
+            {
+
+            }
+
+        }
+
+        internal void DeleteData(string Lokasjon)
+
+        {
+
+            try
+
+            {
+
+                dt = new DataTable();
+
+                SqlConnection con = new SqlConnection(connection);
+
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("DELETE FROM DW_ADMIN.dbo.Bring_Cargo_Overdue_Invoices_Email_Adress_Incl_Body WHERE [Lokasjon] ='" + Lokasjon + "'", con);
+
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+
+
+
+
+            }
+
+            catch (Exception e)
+
+            {
+
+            }
+
+        }
+
+        internal DataTable getLokasjon()
+
+        {
+
+            dt = new DataTable();
+
+            SqlDataAdapter AC = new SqlDataAdapter("SELECT DISTINCT Avdelning as [Lokasjon] FROM DW_ADMIN.dbo.BRINGDK_Redovisning_Danmark ORDER BY Avdelning", connection);
+
+            AC.Fill(dt);
+
+            return dt;
+
+        }
     }
 }
