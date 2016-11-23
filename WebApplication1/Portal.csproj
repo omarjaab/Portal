@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="agr_Create_New.aspx" />
     <Content Include="agr_responsible.aspx" />
     <Content Include="agr_search.aspx" />
     <Content Include="Content\awesome-bootstrap-checkbox.css" />
@@ -120,6 +121,13 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="agr_Create_New.aspx.cs">
+      <DependentUpon>agr_Create_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="agr_Create_New.aspx.designer.cs">
+      <DependentUpon>agr_Create_New.aspx</DependentUpon>
+    </Compile>
     <Compile Include="agr_responsible.aspx.cs">
       <DependentUpon>agr_responsible.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
