@@ -40,6 +40,24 @@ namespace Portal {
         protected global::System.Web.UI.WebControls.Panel agr_modify_Section;
         
         /// <summary>
+        /// scrptmnger control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager scrptmnger;
+        
+        /// <summary>
+        /// updpnl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updpnl;
+        
+        /// <summary>
         /// new_AgreementNumber control.
         /// </summary>
         /// <remarks>
@@ -110,5 +128,14 @@ namespace Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar Vaild_From_Calendar;
+        
+        /// <summary>
+        /// Valid_Until_Calendar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar Valid_Until_Calendar;
     }
 }

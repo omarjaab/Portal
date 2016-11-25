@@ -163,6 +163,7 @@ namespace Portal.Controllers
             }
         }
         // LMC
+        // Agreement/Search and mangment
         internal DataTable getAgreement(string v)
         {
             try
