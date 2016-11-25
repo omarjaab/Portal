@@ -12,8 +12,7 @@ namespace Portal
     public partial class agr_Create_New : System.Web.UI.Page
     {
         Controllers.DefaultController dp = new Controllers.DefaultController();
-        DataTable dt = new DataTable(); // declearing dt as a global variable.
-
+        DataTable dt = new DataTable();
         internal void Page_Load(object sender, EventArgs e)
         {
             dt = dp.Get_AgreementResponsible_Create();

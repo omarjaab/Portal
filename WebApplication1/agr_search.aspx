@@ -1,29 +1,23 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="agr_search.aspx.cs" Inherits="Portal.agr_search" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="Navigation" runat="server">
     <ul id="Navigator" runat="server"></ul>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <style>
         .ComponentCell {
             width: 65%;
             padding: 5px;
         }
-
         .LabelCell {
             padding: 5px;
             width: 35%;
         }
-
         #SectionContainer1 {
             width: 40%;
         }
     </style>
-
 <form id="form1" runat="server">
-    <asp:Panel ID="agr_srch_Section" Visible="true" runat="server">
-        
+    <asp:Panel ID="agr_srch_Section" Visible="true" runat="server">     
             <asp:ScriptManager ID="scrptmnger" runat="server"></asp:ScriptManager>
             <asp:UpdatePanel ID="updpnl" runat="server" ChildrenAsTriggers="true">
                 <ContentTemplate>
@@ -66,24 +60,18 @@
                         </tr>
                         <tr>
                             <td class="LabelCell">Avtalsansvarig:</td>
-                            <%--<--- mellan slag?--%>
                             <td class="ComponentCell" runat="server" id="avtals_Ansv_txtBox_Container">
                                 <asp:TextBox ID="agreementResponsible_txtBox" runat="server" Text="*"></asp:TextBox>
                             </td>
-
                         </tr>
                         <tr>
                             <td class="LabelCell">Avdelning:</td>
                             <td class="ComponentCell" runat="server" id="avdelning_txtBox_Container">
                                 <asp:TextBox ID="department_txtBox" runat="server" Text="*"></asp:TextBox>
                             </td>
-
                         </tr>
-
                     </table>
-                    <%--Search button WORKING--%>
                     <asp:Button runat="server" ID="SokAvtal_btn" Text="Sök avtal" OnClick="SokAvtal_btn_Click" />
-                    <%--Restart button NOT WORKING--%>
                     <asp:Button runat="server" ID="aterstall_btn" Text="Återställ" />
                     <br />
                     <br />
@@ -98,11 +86,8 @@
                     <asp:AsyncPostBackTrigger ControlID="gv_Result" EventName="RowDeleting" />
                 </Triggers>
             </asp:UpdatePanel>
-      
     </asp:Panel>
-
-    <asp:Panel ID="agr_modify_Section" runat="server" Visible="false">
-     
+    <asp:Panel ID="agr_modify_Section" runat="server" Visible="false"> 
         <table>
             <tr>
                 <td>Avtalsnummer</td>
@@ -114,8 +99,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td>Ansvarigt platskontor/stab: </td>
-              
+                <td>Ansvarigt platskontor/stab: </td> 
                 <td>
                     <asp:TextBox runat="server"></asp:TextBox></td>
                 <td>Avtalsansvariga: </td>
@@ -207,8 +191,7 @@
                 <td></td>
                 <td></td>
             </tr>
-        </table>
-         
+        </table>       
     </asp:Panel>
    </form>
 </asp:Content>

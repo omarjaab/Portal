@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="agr_responsible.aspx.cs" Inherits="Portal.agr_responsible" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="Navigation" runat="server">
     <ul id="Navigator" runat="server">
     </ul>

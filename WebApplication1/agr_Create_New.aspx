@@ -1,16 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="agr_Create_New.aspx.cs" Inherits="Portal.agr_Create_New" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="Navigation" runat="server">
     <ul id="Navigator" runat="server"></ul>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <style>
         .ComponentCell {
             width: 65%;
             padding: 5px;
         }
-
         .LabelCell {
             padding: 5px;
             width: 35%;
@@ -20,7 +17,6 @@
             width: 40%;
         }
     </style>
-
     <form id="form1" runat="server">
 
         <asp:Panel ID="agr_modify_Section" runat="server" Visible="true">
