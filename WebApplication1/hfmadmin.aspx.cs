@@ -12,7 +12,7 @@ namespace Portal
     public partial class hfmadmin : System.Web.UI.Page
     {
         Controllers.DefaultController dp = new Controllers.DefaultController();
-        DataTable dt = new DataTable(); // declearing dt as a global variable.
+        DataTable dt = new DataTable();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -24,8 +24,6 @@ namespace Portal
                 Controllers.login.ConstructNavigator(Navigator);
             }
             else { Response.Redirect("Logon.aspx"); }
-            //DropDownSelectYear();
-            //DropDownSelectMounth();
         }
         private void CreateDropDownList()
         {
@@ -38,7 +36,6 @@ namespace Portal
             DropDownDivision.CssClass = "selectpicker";
             DropDownDivision.Attributes.Add("data-live-search", "true");
             DropDownDivisionPlace.Controls.Add(DropDownDivision);
-            // ddl years 
             DropDownList DropDownYear = new DropDownList();
             DropDownYear.ID = "DropDownYear";
             for (int i = 2006; i < 2023; i++)
@@ -48,8 +45,7 @@ namespace Portal
             }
             DropDownYear.CssClass = "selectpicker";
             DropDownYear.Attributes.Add("data-live-search", "true");
-            DropDownYearPlace.Controls.Add(DropDownYear);
-            // ddl months 
+            DropDownYearPlace.Controls.Add(DropDownYear); 
             DropDownList DropDownMounth = new DropDownList();
             DropDownMounth.ID = "DropDownMounth";
             var months = new CultureInfo("SV").DateTimeFormat.MonthNames;

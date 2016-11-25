@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
-//comment ahmed 10:47
+
 namespace Portal
 {
     public partial class agr_responsible : System.Web.UI.Page
@@ -18,7 +18,6 @@ System.Configuration.ConfigurationManager.ConnectionStrings["ConnStringDWAdmin"]
         SqlConnection con;
         DataTable ds = new DataTable();
         SqlCommand cmd = new SqlCommand();
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -31,7 +30,6 @@ System.Configuration.ConfigurationManager.ConnectionStrings["ConnStringDWAdmin"]
             }
             else { Response.Redirect("Logon.aspx"); }
         }
-
         public void BindData()
         {
             con = new SqlConnection(connection);
@@ -46,7 +44,6 @@ System.Configuration.ConfigurationManager.ConnectionStrings["ConnStringDWAdmin"]
             RefreshPage(GridView1.PageIndex);
             con.Close();
         }
-
         public void RefreshPage(int PageNumber)
         {
             int min = 0;
@@ -98,7 +95,6 @@ System.Configuration.ConfigurationManager.ConnectionStrings["ConnStringDWAdmin"]
             BindData();
             con.Close();
         }
-
         protected void DeleteButton_Click(object sender, System.Web.UI.ImageClickEventArgs e)
         {
             con = new SqlConnection(connection);
@@ -111,12 +107,10 @@ System.Configuration.ConfigurationManager.ConnectionStrings["ConnStringDWAdmin"]
             con.Close();
             BindData();
         }
-
         protected void Submit_Click(object sender, EventArgs e)
         {
             string UserId = new_UserId.Text;
             string Email = new_EmailId.Text;
-
             con = new SqlConnection(connection);
             cmd.Connection = con;
             cmd.CommandText = "Execute sp_NewResponsible @UserId, @EmailId";

@@ -12,14 +12,10 @@ namespace Portal
     public partial class agr_Create_New : System.Web.UI.Page
     {
         Controllers.DefaultController dp = new Controllers.DefaultController();
-        DataTable dt = new DataTable(); // declearing dt as a global variable.
-
+        DataTable dt = new DataTable();
         internal void Page_Load(object sender, EventArgs e)
         {
-            //Use this to stop the page from backposting? ---> if (!Page.IsPostBack) { GetData(); }
-
-            LoginAuthentication(); // checks if the user is logedin via logon site before showing this site.
-            //ahmed 3
+            LoginAuthentication();
         }
         private void LoginAuthentication()
         {
@@ -27,12 +23,9 @@ namespace Portal
                 Controllers.login.ConstructNavigator(Navigator);
             else { Response.Redirect("Logon.aspx"); }
         }
-
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-
             ImageButton ib = sender as ImageButton;
-
             if (FindControl("Vaild_From_Calendar").Visible==false)
             {
                 FindControl("Vaild_From_Calendar").Visible = true;
@@ -42,16 +35,12 @@ namespace Portal
                 FindControl("Vaild_From_Calendar").Visible = false;
             }
             ScriptManager.GetCurrent(this).RegisterAsyncPostBackControl(ib);
-
-
         }
-
         protected void Vaild_From_Calendar_VisibleMonthChanged(object sender, MonthChangedEventArgs e)
         {
             TextBox textbox = (TextBox)txtBox_New_Agr_Valid_From.FindControl("Vaild_From_Calendar");
             ScriptManager.GetCurrent(this).RegisterAsyncPostBackControl(textbox);
         }
-
         protected void Vaild_From_Calendar_SelectionChanged(object sender, EventArgs e)
         {
             string txtVaildFrom = txtBox_New_Agr_Valid_From.ToString();

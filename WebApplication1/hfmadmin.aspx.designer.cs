@@ -11,7 +11,7 @@ namespace Portal {
     
     
     public partial class hfmadmin {
-
+        
         /// <summary>
         /// Navigator control.
         /// </summary>
@@ -28,7 +28,6 @@ namespace Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        /// protected global::System.Web.UI.HtmlControls.HtmlGenericControl Navigator;
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
