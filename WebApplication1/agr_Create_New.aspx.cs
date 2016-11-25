@@ -19,7 +19,7 @@ namespace Portal
             //Use this to stop the page from backposting? ---> if (!Page.IsPostBack) { GetData(); }
 
             LoginAuthentication(); // checks if the user is logedin via logon site before showing this site.
-            //ahmed
+            //ahmed 2
         }
         private void LoginAuthentication()
         {
