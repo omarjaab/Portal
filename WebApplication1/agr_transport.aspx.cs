@@ -9,12 +9,13 @@ using System.Web.UI.WebControls;
 
 namespace Portal
 {
-    public partial class agr_Create_New : System.Web.UI.Page
+    public partial class agr_transport : System.Web.UI.Page
     {
         Controllers.DefaultController dp = new Controllers.DefaultController();
         DataTable dt = new DataTable();
         internal void Page_Load(object sender, EventArgs e)
         {
+            divisionlbl.Text = Session["DivisionName"].ToString();
             dt = dp.Get_AgreementResponsible_Create();
             // Use this to stop the page from backposting? ---> if (!Page.IsPostBack) { GetData(); }
             // checks if the user is logedin via logon site before showing this site.

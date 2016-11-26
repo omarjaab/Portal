@@ -66,7 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="agr_Create_New.aspx" />
+    <Content Include="agr_transport.aspx" />
     <Content Include="agr_responsible.aspx" />
     <Content Include="agr_search.aspx" />
     <Content Include="Content\awesome-bootstrap-checkbox.css" />
@@ -77,6 +77,7 @@
     <Content Include="images\SaveIcon.png" />
     <Content Include="hfmadmin.aspx" />
     <Content Include="Bring_Cargo_Overdue_Invoices_Email.aspx" />
+    <Content Include="agr_leverantor.aspx" />
     <Content Include="pnbfileupload.aspx" />
     <None Include="Scripts\jquery-1.8.0.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.0.js" />
@@ -122,12 +123,12 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="agr_Create_New.aspx.cs">
-      <DependentUpon>agr_Create_New.aspx</DependentUpon>
+    <Compile Include="agr_transport.aspx.cs">
+      <DependentUpon>agr_transport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="agr_Create_New.aspx.designer.cs">
-      <DependentUpon>agr_Create_New.aspx</DependentUpon>
+    <Compile Include="agr_transport.aspx.designer.cs">
+      <DependentUpon>agr_transport.aspx</DependentUpon>
     </Compile>
     <Compile Include="agr_responsible.aspx.cs">
       <DependentUpon>agr_responsible.aspx</DependentUpon>
@@ -162,6 +163,13 @@
     </Compile>
     <Compile Include="Bring_Cargo_Overdue_Invoices_Email.aspx.designer.cs">
       <DependentUpon>Bring_Cargo_Overdue_Invoices_Email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="agr_leverantor.aspx.cs">
+      <DependentUpon>agr_leverantor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="agr_leverantor.aspx.designer.cs">
+      <DependentUpon>agr_leverantor.aspx</DependentUpon>
     </Compile>
     <Compile Include="pnbfileupload.aspx.cs">
       <DependentUpon>pnbfileupload.aspx</DependentUpon>
