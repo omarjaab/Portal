@@ -174,12 +174,12 @@ namespace Portal
             Session["DivisionName"] = DDL_Create_DIV.SelectedItem.ToString();
             if (int.Parse(DDL_Create_Agr.SelectedValue) == 1)
             {
+                
                 Response.Redirect("agr_transport.aspx");
             }
             else if(int.Parse(DDL_Create_Agr.SelectedValue) == 2)
             {
-                Response.Redirect("agr_leverantor.aspx");
-            }
+                Response.Redirect("agr_leverantor.aspx");            }
             
 
             //// ****************** Working code ***************
