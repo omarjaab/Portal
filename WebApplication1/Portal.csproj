@@ -69,7 +69,13 @@
     <Content Include="agr_Create_New.aspx" />
     <Content Include="agr_responsible.aspx" />
     <Content Include="agr_search.aspx" />
+    <Content Include="Appinfo.aspx" />
     <Content Include="Content\awesome-bootstrap-checkbox.css" />
+    <Content Include="Content\bootstrap-select.min.css" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Scripts\bootstrap-select.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="images\calendar.png" />
     <Content Include="images\calendar2.png" />
     <Content Include="images\DeleteIcon.png" />
@@ -142,6 +148,13 @@
     </Compile>
     <Compile Include="agr_search.aspx.designer.cs">
       <DependentUpon>agr_search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Appinfo.aspx.cs">
+      <DependentUpon>Appinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appinfo.aspx.designer.cs">
+      <DependentUpon>Appinfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\login.cs" />

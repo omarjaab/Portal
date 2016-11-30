@@ -20,7 +20,7 @@
                 <ContentTemplate>
                     <asp:GridView ID="GridView1" runat="server" PageSize="5"
                         AllowPaging="true" OnPageIndexChanging="GridView1_PageIndexChanging" 
-                        CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="false">
+                        CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="false" Width="100%">
                 <AlternatingRowStyle BackColor="White" />
                 <EditRowStyle BackColor="#7C6F57" />
                 <FooterStyle BackColor="#1C5E55"  Font-Bold="True" ForeColor="White" />
