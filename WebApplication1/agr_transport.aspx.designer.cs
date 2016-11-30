@@ -10,7 +10,7 @@
 namespace Portal {
     
     
-    public partial class agr_Create_New {
+    public partial class agr_transport {
         
         /// <summary>
         /// Navigator control.
@@ -29,6 +29,15 @@ namespace Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// divisionlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label divisionlbl;
         
         /// <summary>
         /// agr_modify_Section control.

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="agr_Create_New.aspx.cs" Inherits="Portal.agr_Create_New" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="agr_transport.aspx.cs" Inherits="Portal.agr_transport" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Navigation" runat="server">
     <ul id="Navigator" runat="server"></ul>
 </asp:Content>
@@ -18,7 +18,7 @@
         }
     </style>
     <form id="form1" runat="server">
-
+        <asp:Label runat="server" ID="divisionlbl"></asp:Label>
         <asp:Panel ID="agr_modify_Section" runat="server" Visible="true">
             <asp:ScriptManager ID="scrptmnger" runat="server"></asp:ScriptManager>
             <asp:UpdatePanel ID="updpnl" runat="server" ChildrenAsTriggers="true">
