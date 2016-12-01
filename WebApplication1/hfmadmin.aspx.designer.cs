@@ -31,30 +31,39 @@ namespace Portal {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// DropDownDivisionPlace control.
+        /// DropDownDivision control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DropDownDivisionPlace;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownDivision;
         
         /// <summary>
-        /// DropDownYearPlace control.
+        /// DropDownYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DropDownYearPlace;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownYear;
         
         /// <summary>
-        /// DropDownMounthPlace control.
+        /// DropDownMonth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DropDownMounthPlace;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownMonth;
+        
+        /// <summary>
+        /// Submit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Submit;
     }
 }

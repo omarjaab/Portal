@@ -49,13 +49,13 @@ namespace Portal {
         protected global::System.Web.UI.WebControls.DropDownList usersddl;
         
         /// <summary>
-        /// t1 control.
+        /// Password_Panel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel t1;
+        protected global::System.Web.UI.UpdatePanel Password_Panel;
         
         /// <summary>
         /// passwordContainer control.
@@ -76,13 +76,13 @@ namespace Portal {
         protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
         
         /// <summary>
-        /// UpdatePanel1 control.
+        /// applic_listbox_Panel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.UpdatePanel applic_listbox_Panel;
         
         /// <summary>
         /// applicationschklbox control.
@@ -94,13 +94,13 @@ namespace Portal {
         protected global::System.Web.UI.WebControls.CheckBoxList applicationschklbox;
         
         /// <summary>
-        /// UpdatePanel2 control.
+        /// agr_listbox_Panel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
+        protected global::System.Web.UI.UpdatePanel agr_listbox_Panel;
         
         /// <summary>
         /// agreementchklbox control.
@@ -112,13 +112,13 @@ namespace Portal {
         protected global::System.Web.UI.WebControls.CheckBoxList agreementchklbox;
         
         /// <summary>
-        /// UpdatePanel3 control.
+        /// Division_Panel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel3;
+        protected global::System.Web.UI.UpdatePanel Division_Panel;
         
         /// <summary>
         /// divisionerchklbox control.
@@ -157,15 +157,6 @@ namespace Portal {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// lblUserName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUserName;
-        
-        /// <summary>
         /// txtUserNamePanel control.
         /// </summary>
         /// <remarks>
@@ -173,15 +164,6 @@ namespace Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUserNamePanel;
-        
-        /// <summary>
-        /// lblPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPassword;
         
         /// <summary>
         /// txtPasswordPanel control.

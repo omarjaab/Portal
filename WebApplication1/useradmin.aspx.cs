@@ -24,6 +24,7 @@ namespace Portal
                     Controllers.login.ConstructNavigator(Navigator);
                     GetAdminInformation();
 
+                  
 
 
                 }

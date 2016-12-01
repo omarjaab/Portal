@@ -8,27 +8,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <div id="jqxRibbon">
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
     <div>
-       <div>
- 
-        <asp:ScriptManager runat="server"></asp:ScriptManager>
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-
-            <ContentTemplate>
-                <asp:label id="lbl" runat="server" ></asp:label>
-            </ContentTemplate>
-            <Triggers>
-                <asp:AsyncPostBackTrigger ControlID="ddl" EventName="SelectedIndexChanged" />
-            </Triggers>
-        </asp:UpdatePanel>
-        <asp:DropDownList ID="ddl" runat="server"  AutoPostBack="True" OnSelectedIndexChanged="ddl_SelectedIndexChanged">
-            <asp:ListItem Text="aa"></asp:ListItem>
-                        <asp:ListItem Text="bb"></asp:ListItem>
-                        <asp:ListItem Text="cc"></asp:ListItem>
-
-        </asp:DropDownList>
+        <div>Content 1</div>
+        <div>Content 2</div>
+        <div>Content 3</div>
     </div>
-    </div>
+</div>
     </form>
 </body>
 </html>

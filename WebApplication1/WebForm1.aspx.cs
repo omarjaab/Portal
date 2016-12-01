@@ -16,7 +16,7 @@ namespace WebApplication1
 
         protected void ddl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lbl.Text = ddl.SelectedIndex.ToString();
+            //lbl.Text = ddl.SelectedIndex.ToString();
         }
     }
 }

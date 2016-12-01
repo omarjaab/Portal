@@ -390,11 +390,12 @@ text-transform: inherit;
 
 /* Tables */
 
-	table {
+	/*table {
 		width: 100%;
-	}
+	}*/
+   
 
-		table.default {
+		/*table.default {
 			width: 100%;
 		}
 
@@ -423,7 +424,7 @@ text-transform: inherit;
 			table.default thead {
 				background: #555555;
 				color: #fff;
-			}
+			}*/
 
 /* Button */
 
@@ -782,3 +783,44 @@ color: #FFF;
 		text-transform: uppercase;
 		font-weight: 700;
 	}
+    .custom-wrapper
+    {
+        padding:25px 25px 25px 25px;
+        
+    }
+
+    .custom-dropdown-wrapper{
+        width:auto; height:300px; position:-ms-page; overflow-y:scroll;
+        background-color:floralwhite;
+    }
+
+
+    input[type=checkbox] {
+        margin-left:-5px !important;
+    }
+
+
+
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid #003eff;
+    background: #1C5E55 !important;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+ #EmailResponsibleGrid
+ {
+        width:100% !important;
+    }
+
+td > span, td > a {
+
+    border: white;
+ 
+    border-width: 1px;
+    margin: 5px;}
+td>table {
+   margin-top:10px;
+}
+

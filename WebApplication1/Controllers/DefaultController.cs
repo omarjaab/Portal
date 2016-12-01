@@ -450,5 +450,49 @@ namespace Portal.Controllers
             return dt;
 
         }
+
+        public DataTable Get_Agreement_Responsible()
+        {
+            dt = new DataTable();
+            SqlConnection con = new SqlConnection(connection);
+            SqlDataAdapter adp = new SqlDataAdapter("Select * from ResponsibleEmail", con);
+            con.Open();
+            adp.Fill(dt);
+            con.Close();
+            return dt;
+        }
+        public void Update_Agreement_Responsible(string RowId, string EmailId)
+        {
+            SqlConnection con = new SqlConnection(connection);
+             SqlCommand cmd = new SqlCommand("exec sp_UpdateResponsible @UserId, @EmailId", con);
+            cmd.Parameters.AddWithValue("@UserId", RowId);
+            cmd.Parameters.AddWithValue("@EmailId", EmailId);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            
+            con.Close();
+        }
+
+        public void Delete_Agreement_Responsible (string RowId)
+        {
+            SqlConnection con = new SqlConnection(connection);
+            SqlCommand cmd = new SqlCommand("EXEC sp_DeleteResponsible @UserId", con);
+            cmd.Parameters.AddWithValue("@UserId", RowId);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+        }
+
+        public void Insert_Agreement_Responsible(string UserId, string Email)
+        {
+            SqlConnection con = new SqlConnection(connection);
+            SqlCommand cmd = new SqlCommand("Execute sp_NewResponsible @UserId, @EmailId",con);
+            cmd.Parameters.AddWithValue("@UserId", UserId);
+            cmd.Parameters.AddWithValue("@EmailId", Email);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

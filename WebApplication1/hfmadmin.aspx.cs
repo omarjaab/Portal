@@ -27,36 +27,41 @@ namespace Portal
         }
         private void CreateDropDownList()
         {
-            DropDownList DropDownDivision = new DropDownList();
-            DropDownDivision.ID = "DropDownDivision";
+            //DropDownList DropDownDivision = new DropDownList();
+            //DropDownDivision.ID = "DropDownDivision";
             DropDownDivision.DataSource = dp.getHFMAdminitrationDivision();
-            DropDownDivision.DataTextField = "Division descr";
-            DropDownDivision.DataValueField = "Sort_order";
+            //DropDownDivision.DataTextField = "Division descr";
+            //DropDownDivision.DataValueField = "Sort_order";
             DropDownDivision.DataBind();
-            DropDownDivision.CssClass = "selectpicker";
-            DropDownDivision.Attributes.Add("data-live-search", "true");
-            DropDownDivisionPlace.Controls.Add(DropDownDivision);
-            DropDownList DropDownYear = new DropDownList();
-            DropDownYear.ID = "DropDownYear";
+            //DropDownDivision.CssClass = "selectpicker";
+            //DropDownDivision.Attributes.Add("data-live-search", "true");
+            //DropDownDivisionPlace.Controls.Add(DropDownDivision);
+            //DropDownList DropDownYear = new DropDownList();
+            //DropDownYear.ID = "DropDownYear";
             for (int i = 2006; i < 2023; i++)
             {
                 ListItem li = new ListItem(i.ToString(), i.ToString());
                 DropDownYear.Items.Add(li);
             }
-            DropDownYear.CssClass = "selectpicker";
-            DropDownYear.Attributes.Add("data-live-search", "true");
-            DropDownYearPlace.Controls.Add(DropDownYear); 
-            DropDownList DropDownMounth = new DropDownList();
-            DropDownMounth.ID = "DropDownMounth";
+            //DropDownYear.CssClass = "selectpicker";
+            //DropDownYear.Attributes.Add("data-live-search", "true");
+            //DropDownYearPlace.Controls.Add(DropDownYear); 
+            //DropDownList DropDownMonth = new DropDownList();
+            //DropDownMounth.ID = "DropDownMonth";
             var months = new CultureInfo("SV").DateTimeFormat.MonthNames;
             for (int i = 0; i < months.Length - 1; i++)
             {
                 ListItem li = new ListItem(months[i], (i + 1).ToString());
-                DropDownMounth.Items.Add(li);
+                DropDownMonth.Items.Add(li);
             }
-            DropDownMounth.CssClass = "selectpicker";
-            DropDownMounth.Attributes.Add("data-live-search", "true");
-            DropDownMounthPlace.Controls.Add(DropDownMounth);
+            //DropDownMounth.CssClass = "selectpicker";
+            //DropDownMounth.Attributes.Add("data-live-search", "true");
+            //DropDownMounthPlace.Controls.Add(DropDownMounth);
+        }
+
+        protected void Submit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
