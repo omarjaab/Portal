@@ -12,16 +12,25 @@
     <script src="Scripts/jquery-1.10.2.min.js"></script>
     <%--<script src="Scripts/jquery.dropotron.min.js"></script>--%>
     <script src="Scripts/init.js"></script>
-    <link rel="stylesheet" href="Content/bootstrap.min.css">
-    <link rel="stylesheet" href="Content/bootstrap-select.min.css">
+    <link rel="stylesheet" href="Content/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Content/bootstrap-select.min.css"/>
     <script src="Scripts/jquery.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/bootstrap-select.min.js"></script>
     <link href="Content/awesome-bootstrap-checkbox.css" rel="stylesheet" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Content/jquery-ui.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="Content/jquery-ui.css"/>
     <script src="Scripts/jquery-ui.js"></script>
+     <script> 
+  $( function() { 
+      $('#tabs') 
+      .tabs() 
+      .addClass('ui-tabs-vertical ui-helper-clearfix');   
+
+  } ); 
+  </script>
+
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>

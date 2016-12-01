@@ -71,7 +71,7 @@
                         <td>
 
                             <caption>
-                                
+
                                 <asp:DropDownList ID="ddlLokasjon" runat="server" CssClass="selectpicker">
                                 </asp:DropDownList>
                                 <br />
@@ -83,7 +83,7 @@
                                 <td>
 
                                     <caption>
-                                        
+
                                         <asp:TextBox ID="txtEmailAdd" runat="server" Height="40px" TextMode="Email" Width="300px"></asp:TextBox>
                                         <br />
                                     </caption>
@@ -93,7 +93,7 @@
                                         <td>
                                             <td>cc</td>
                                             <caption>
-                                                
+
                                                 <asp:TextBox ID="txtccAdd" runat="server" Height="40px" TextMode="Email" Width="300px"></asp:TextBox>
                                                 <br />
                                             </caption>
@@ -103,7 +103,7 @@
                                                 <td>
                                                     <td>Subject</td>
                                                     <caption>
-                                                        
+
                                                         <asp:TextBox ID="txtSubjectAdd" runat="server" Height="100px" TextMode="MultiLine" Width="220px"></asp:TextBox>
                                                         <br />
                                                     </caption>
@@ -113,7 +113,7 @@
                                                         <td>
                                                             <td>Text</td>
                                                             <caption>
-                                                                
+
                                                                 <asp:TextBox ID="txtBodyAdd" runat="server" Height="100px" TextMode="MultiLine" Width="200px"></asp:TextBox>
                                                                 <br />
                                                             </caption>

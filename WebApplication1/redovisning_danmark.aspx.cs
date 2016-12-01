@@ -69,6 +69,16 @@ namespace Portal
             
         }
 
-
+        //protected void GvAllData_RowDataBound(object sender, GridViewRowEventArgs e)
+        //{
+        //    if (e.Row.RowType == DataControlRowType.DataRow)
+        //    {
+        //        if (e.Row.Cells[0].Text=="")
+        //        {
+        //            System.Web.UI.WebControls.CommandField imgBtn = (System.Web.UI.WebControls.CommandField)e.Row.Cells[2].FindControl("");
+        //            imgBtn.Visible = false;
+        //        }
+        //    }
+        //}
     }
 }
