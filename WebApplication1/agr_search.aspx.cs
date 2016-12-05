@@ -36,20 +36,21 @@ namespace Portal
 
             dt = dp.Get_AgreementResponsible_Create();
 
-            for (int i = 0; i <dt.Rows.Count; i++)
-            {
-                dt.Rows[i]["UserID"].ToString();
-                DDL_AgreementResponsible.Items.Add(new ListItem(dt.Rows[i]["UserID"].ToString()));
-                DDL_Backup_1.Items.Add(new ListItem(dt.Rows[i]["UserID"].ToString()));
-                DDL_Backup_2.Items.Add(new ListItem(dt.Rows[i]["UserID"].ToString()));
-                DDL_Backup_3.Items.Add(new ListItem(dt.Rows[i]["UserID"].ToString()));
-            }
+            //for (int i = 0; i <dt.Rows.Count; i++)
+            //{
+            //    dt.Rows[i]["UserID"].ToString();
+            //    DDL_AgreementResponsible.Items.Add(new ListItem(dt.Rows[i]["UserID"].ToString()));
+            //    DDL_Backup_1.Items.Add(new ListItem(dt.Rows[i]["UserID"].ToString()));
+            //    DDL_Backup_2.Items.Add(new ListItem(dt.Rows[i]["UserID"].ToString()));
+            //    DDL_Backup_3.Items.Add(new ListItem(dt.Rows[i]["UserID"].ToString()));
+            //}
 
         }
         private void CreateDropDownsLists()
         {
+            string UID = Session["UserID"].ToString();
             //DataTable dt = new DataTable(); // Is it better to decleare dt as a global variable?
-            dt = dp.getAgreement("");  // <-----What should i write here?
+            dt = dp.getAgreement(UID);  // <-----What should i write here?
 
             
             for (int i = 0; i < dt.Rows.Count; i++) // A for_Loop that use's if-sats to populate the DropDownList's
@@ -64,6 +65,7 @@ namespace Portal
                 {
                     dll_Company_Division.Items.Add(new ListItem(dt.Rows[i]["Division name - current"].ToString(), dt.Rows[i]["CompanyDivision"].ToString()));
                     DDL_Create_DIV.Items.Add(new ListItem(dt.Rows[i]["Division name - current"].ToString(), dt.Rows[i]["CompanyDivision"].ToString()));
+                   
                 }
             }
             
@@ -167,7 +169,18 @@ namespace Portal
 
         protected void Create_btn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("agr_Create_New.aspx");
+            // This button take division as session value to be used on other pages 
+            // agreement ddl is only filter which page will be open 
+            Session["DivisionName"] = DDL_Create_DIV.SelectedItem.ToString();
+            if (int.Parse(DDL_Create_Agr.SelectedValue) == 1)
+            {
+                
+                Response.Redirect("agr_transport.aspx");
+            }
+            else if(int.Parse(DDL_Create_Agr.SelectedValue) == 2)
+            {
+                Response.Redirect("agr_leverantor.aspx");            }
+            
 
             //// ****************** Working code ***************
             //string AgreementType = DDL_Create_Agr.SelectedValue;

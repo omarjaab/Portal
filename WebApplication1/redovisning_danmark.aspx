@@ -32,7 +32,7 @@
     <asp:Label ID="lblMsg" runat="server"></asp:Label>
     <br />
 
-    <asp:GridView ID="GvAllData" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False"   OnRowDeleting="GvAllData_RowDeleting" DataKeyNames="ID" >
+    <asp:GridView ID="GvAllData" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False"   OnRowDeleting="GvAllData_RowDeleting" OnRowDataBound="GvAllData_RowDataBound" DataKeyNames="ID" width="100%">
         <AlternatingRowStyle BackColor="White" />
         <EditRowStyle BackColor="#7C6F57" />
         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />

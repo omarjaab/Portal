@@ -163,13 +163,14 @@ namespace Portal.Controllers
             }
         }
         // LMC
-        internal DataTable getAgreement(string v)
+        // Agreement/Search and mangment
+        internal DataTable getAgreement(string uid)
         {
             try
             {
                 dt = new DataTable();
                 SqlDataAdapter Adapter = new SqlDataAdapter("exec [sp_Agr_Info] @userID", connection);
-                Adapter.SelectCommand.Parameters.AddWithValue("@userID", v);
+                Adapter.SelectCommand.Parameters.AddWithValue("@userID", uid);
                 Adapter.Fill(dt);
                 return dt;
             }

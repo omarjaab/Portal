@@ -102,7 +102,7 @@
     <%-- <div>--%>
     <div class="wrapper style1">
         <div id="header">
-            <div>
+            <div class="container">
 
                 <nav id="nav">
                     <div id="logo">
