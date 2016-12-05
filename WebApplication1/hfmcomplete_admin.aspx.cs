@@ -15,9 +15,18 @@ namespace Portal
         DataTable dt = new DataTable();
         protected void Page_Load(object sender, EventArgs e)
         {
-            DateDropDown();
-            VersionDropDownList();
-            DivisionDropDownList();
+            if (!Page.IsPostBack)
+            {
+                DateDropDown();
+                VersionDropDownList();
+                DivisionDropDownList();
+            }
+            if (Controllers.login.data != null)
+            {
+                Controllers.login.ConstructNavigator(Navigator);
+            }
+            else { Response.Redirect("Logon.aspx"); }
+
         }
 
         private void VersionDropDownList()

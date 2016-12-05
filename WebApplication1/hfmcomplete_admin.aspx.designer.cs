@@ -13,6 +13,15 @@ namespace Portal {
     public partial class hfmcomplete_admin {
         
         /// <summary>
+        /// Navigator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Navigator;
+        
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>
@@ -22,13 +31,13 @@ namespace Portal {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Label1 control.
+        /// Versionlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label Versionlbl;
         
         /// <summary>
         /// DropDownVersion control.
@@ -40,13 +49,13 @@ namespace Portal {
         protected global::System.Web.UI.WebControls.DropDownList DropDownVersion;
         
         /// <summary>
-        /// Label2 control.
+        /// Divisionlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label Divisionlbl;
         
         /// <summary>
         /// DropDownDivision control.
@@ -58,13 +67,13 @@ namespace Portal {
         protected global::System.Web.UI.WebControls.DropDownList DropDownDivision;
         
         /// <summary>
-        /// Label3 control.
+        /// Datelbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label Datelbl;
         
         /// <summary>
         /// DropDownYears control.
