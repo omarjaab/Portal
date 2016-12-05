@@ -73,6 +73,7 @@
     <Content Include="Content\awesome-bootstrap-checkbox.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\jquery-ui.css" />
+    <Content Include="hfmcomplete_admin.aspx" />
     <Content Include="images\calendar.png" />
     <Content Include="images\calendar2.png" />
     <Content Include="images\DeleteIcon.png" />
@@ -176,6 +177,13 @@
     </Compile>
     <Compile Include="agr_leverantor.aspx.designer.cs">
       <DependentUpon>agr_leverantor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hfmcomplete_admin.aspx.cs">
+      <DependentUpon>hfmcomplete_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hfmcomplete_admin.aspx.designer.cs">
+      <DependentUpon>hfmcomplete_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="pnbfileupload.aspx.cs">
       <DependentUpon>pnbfileupload.aspx</DependentUpon>

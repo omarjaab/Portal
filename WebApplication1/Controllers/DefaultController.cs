@@ -15,7 +15,8 @@ namespace Portal.Controllers
 
         string connection =
             System.Configuration.ConfigurationManager.ConnectionStrings["ConnStringDWAdmin"].ConnectionString;
-
+        string connectionGlobal =
+            System.Configuration.ConfigurationManager.ConnectionStrings["ConnStringDWGlobal"].ConnectionString;
 
         public DataTable Login(string username, string password)
         {
@@ -391,10 +392,6 @@ namespace Portal.Controllers
                 cmd.ExecuteNonQuery();
 
                 con.Close();
-
-
-
-
             }
 
             catch (Exception e)
@@ -424,10 +421,6 @@ namespace Portal.Controllers
                 cmd.ExecuteNonQuery();
 
                 con.Close();
-
-
-
-
             }
 
             catch (Exception e)
@@ -483,6 +476,21 @@ namespace Portal.Controllers
             cmd.ExecuteNonQuery();
             con.Close();
 
+        }
+
+        internal DataTable getHFMCompleteTransactionForexport()
+        {
+            dt = new DataTable();
+            SqlDataAdapter AC = new SqlDataAdapter("Execute sp_HFMCOMPLETE_TRANSACTION_FOREXPORT", connection);
+            AC.Fill(dt);
+            return dt;
+        }
+        internal DataTable getHFMCompleteAadmin()
+        {
+            dt = new DataTable();
+            SqlDataAdapter AC = new SqlDataAdapter("Execute sp_HFMComplete_Admin_Division_DropDown", connectionGlobal);
+            AC.Fill(dt);
+            return dt;
         }
 
         public void Insert_Agreement_Responsible(string UserId, string Email)
